@@ -1,32 +1,31 @@
 package com.example.translationkotlin
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import android.content.Intent
 
-class MainActivity : AppCompatActivity() {
+class phrases : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_phrases)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            val button: Button = findViewById(R.id.searchBTN)
+            val button: Button = findViewById(R.id.returnBTN)
             button.setOnClickListener {
-                openNewActivity()
+                returnToMain()
             }
             insets
         }
     }
 
-    fun openNewActivity() {
-        val intent = Intent(this, MainActivity2::class.java)
+    fun returnToMain() {
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
-
 }

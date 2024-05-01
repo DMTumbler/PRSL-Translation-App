@@ -13,6 +13,16 @@
         android:theme="@style/Theme.TranslationKotlin"
         tools:targetApi="31">
         <activity
+            android:name=".phrases"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".gifsPanel"
+            android:exported="false"
+            android:theme="@style/Theme.TranslationKotlin" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

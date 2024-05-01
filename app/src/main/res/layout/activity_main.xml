@@ -7,8 +7,10 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="8dp"
+    android:background="@mipmap/trop_foreground"
     android:visibility="visible"
     tools:context=".MainActivity">
+
 
     <RelativeLayout
         android:layout_marginTop="2dp"
@@ -37,9 +39,10 @@
 
         </Button>
         <Button
+            android:id="@+id/phraseBTN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Frase Dictionary"
+            android:text="Phrase Dictionary"
             android:textSize="24dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="80dp"
